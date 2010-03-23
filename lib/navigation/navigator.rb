@@ -109,7 +109,7 @@ module RPH
       # before defaulting to a titleized string
       def text_for(link)
         begin
-          link.to_s.singularize.titleize.constantize.human_name :count => 2
+          link.to_s.singularize.classify.constantize.human_name :count => 2
         rescue
           link.to_s.titleize
         end
